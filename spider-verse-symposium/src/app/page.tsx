@@ -3,14 +3,17 @@
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import sponsorsHeading from "../../images/sponsors-heading.webp";
+import SplashScreen from "@/components/SplashScreen";
 import HeroSection from "@/components/HeroSection";
 import FeaturedEventsSection from "@/components/FeaturedEventsSection";
-import SplashScreen from "@/components/SplashScreen";
 import MiguelStage from "@/components/MiguelStage";
 import ComicStamp from "@/components/ComicStamp";
+
 import CountdownSection from "@/components/CountdownSection";
 import SpiderTracerIcon from "@/components/SpiderTracerIcon";
 import PerfHUD from "@/components/PerfHUD";
+import ProceduralPortal from "@/components/ProceduralPortal";
+import SpiderWebTunnel from "@/components/SpiderWebTunnel";
 
 /* ── LAZY LOOP VIDEO ──
    `loader1.mp4` (the events→sponsors interlude strip) is ~30MB — by far the
