@@ -1,14 +1,13 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import Image from "next/image";
-import sponsorsHeading from "../../images/sponsors-heading.webp";
 import HeroSection from "@/components/HeroSection";
 import FeaturedEventsSection from "@/components/FeaturedEventsSection";
 import SplashScreen from "@/components/SplashScreen";
 import MiguelStage from "@/components/MiguelStage";
 import ComicStamp from "@/components/ComicStamp";
 import CountdownSection from "@/components/CountdownSection";
+import SponsorsSection from "@/components/SponsorsSection";
 import SpiderTracerIcon from "@/components/SpiderTracerIcon";
 import PerfHUD from "@/components/PerfHUD";
 
@@ -167,53 +166,7 @@ export default function EntryPortal() {
           />
         </section>
 
-        <section
-          id="sponsors"
-          className="relative z-10 min-h-[50vh] flex flex-col items-center justify-center px-4"
-          style={{
-            background:
-              "linear-gradient(180deg, var(--ink-black), #062654 50%, var(--ink-black))",
-          }}
-        >
-          <div className="relative">
-            <div
-              className="absolute -inset-4 border-2 border-[var(--web-blue-light)] opacity-20"
-              style={{ transform: "rotate(1deg)" }}
-            />
-            {/* Heading is artwork; the <h2> keeps a real heading for assistive
-                tech, with the alt text carrying the name. */}
-            <h2
-              style={{
-                margin: 0,
-                width: "clamp(240px, 42vw, 560px)",
-                lineHeight: 0,
-              }}
-            >
-              <Image
-                src={sponsorsHeading}
-                alt="Sponsors"
-                style={{
-                  width: "100%",
-                  height: "auto",
-                  filter:
-                    "drop-shadow(0 0 1px rgba(242,239,233,0.55)) drop-shadow(0 6px 26px rgba(0,0,0,0.85))",
-                }}
-                sizes="(max-width: 768px) 80vw, 560px"
-              />
-            </h2>
-          </div>
-
-          <p
-            className="mt-8 text-center max-w-lg opacity-50 text-sm tracking-wider uppercase"
-            style={{
-              fontFamily: "var(--font-display)",
-              letterSpacing: "0.2em",
-            }}
-          >
-            Partners across the multiverse
-          </p>
-          <div className="absolute inset-0 halftone-bg pointer-events-none" />
-        </section>
+        <SponsorsSection />
 
         {/* ── Countdown ──
             Sits between sponsors and the coordinators so the page ends on a
